@@ -7,7 +7,7 @@ module.exports.getreview = async(req,res)=>{
             return res.status(400).send("Code is required");
         }
         const result = await aiservice.getresponse(code)
-        console.log("result", result);
+        
         res.status(200).send( result)
         
     }
