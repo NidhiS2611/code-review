@@ -25,7 +25,7 @@ function App() {
 
 
  async  function reviewcode(){
-     const response = await axios.post('http://localhost:3000/ai/get-response',{code})
+     const response = await axios.post('https://code-review-jade.vercel.app/ai/get-review',{code})
      console.log(response.data);
       setReview(response.data)
      
