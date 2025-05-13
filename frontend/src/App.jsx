@@ -16,16 +16,16 @@ function App() {
   const[code,setCode] = useState(`function sum(){
     return 1 + 1
   }`)
-  useState
+  // Removed invalid useState call
 
   const[review , setReview] = useState('')
   useEffect(() => {
-    prism.highlightAll();
+    prism.highlightAll(); // Correct usage of Prism.js
   }, []);
 
 
  async  function reviewcode(){
-     const response = await axios.post('https://code-review-r2el.onrender.com/ai/get-response', { code })
+    const response = await axios.post('https://code-review-r2el.onrender.com//ai/get-response', { code })
      console.log(response.data);
       setReview(response.data)
      
